@@ -1,7 +1,7 @@
 # Import python packages
 import streamlit as st
 #from snowflake.snowpark.context import get_active_session
-#import pandas as pd
+
 import requests
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 st_df=st.dataframe(data= smoothiefroot_response.json(), use_container_width = True)
